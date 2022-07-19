@@ -1,0 +1,9 @@
+echo "Enter a number:"
+read n
+u=$((n%2))
+if [ $u != 0 ]
+then
+	echo "$n is odd"
+else
+	echo "$n is even"
+fi
