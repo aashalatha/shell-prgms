@@ -1,0 +1,13 @@
+#!/bin/sh
+echo -n "Please enter directory name you wish to search:"
+read dir
+for f in "$dir"/*
+do
+	if [ -f $f ]
+	then
+		echo "$dir is a directory"
+		echo $f
+	else
+		echo "$dir is a file"
+	fi
+done
