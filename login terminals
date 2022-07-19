@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Enter Logname or uid:"
+read input
+if [ $input ] && [ $input -eq $input 2>/dev/null ]
+then 
+	echo "Number of terminals are:"
+	cat /etc/passwd | grep $input -c
+else
+	cat /etc/passwd>userlist
+	echo "Number of terminals are:"
+	grep -c $input userlist 
+fi
