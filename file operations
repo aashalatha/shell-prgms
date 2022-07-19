@@ -1,0 +1,14 @@
+f="f1.txt"
+while read line;
+do
+	echo $line;
+done<$f
+
+echo "Before appending:"
+cat f1.txt
+echo "It is a good website">>f1.txt
+cat f1.txt
+
+echo "Enter a filename to remove:"
+read f
+rm -i $f
