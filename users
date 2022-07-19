@@ -1,0 +1,14 @@
+echo "Enter the user name:"
+read u
+y=`cat /etc/passwd`
+touch ulist
+echo $y>ulist
+echo $ulist
+while read line
+if [ $u == $y ]
+then 
+	echo $u 
+	who |wc -l
+else
+	echo "Invalid user"
+fi
