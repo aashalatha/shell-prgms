@@ -1,0 +1,8 @@
+a="Linux"
+b="Hint"
+echo "$a $b"
+c="$a $b"
+c+=" is good"
+echo $c
+s=${c:6:4}
+echo "Substring = " $s
