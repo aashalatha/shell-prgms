@@ -1,0 +1,11 @@
+echo "Enter a number:"
+read n
+sum=0
+rev=0
+while [ $n -gt 0 ]
+do
+	sum=$((n%10))
+	rev=$((rev*10+sum))
+	n=$((n/10))
+done
+echo "Reverse of number: " $rev
